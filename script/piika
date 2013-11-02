@@ -1,0 +1,11 @@
+#!/bin/sh
+:; exec gosh -- $0 "$@"
+
+(use piika.cli)
+
+(define (main args)
+  (run args))
+
+;; Local Variables:
+;; mode: scheme
+;; End:

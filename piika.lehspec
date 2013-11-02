@@ -1,0 +1,10 @@
+
+
+(spec
+ (name "piika")
+ (description "piika")
+ (homepage "http://github.com/mytoh/piika")
+ (files ("script/piika"
+         "lib/piika/cli.scm"
+         "piika.lehspec"
+         )))
