@@ -13,7 +13,7 @@
   (display "two")
   (newline))
 
-(define-task three (three)
+(define-task three (two)
   (display "three")
   (newline))
 
