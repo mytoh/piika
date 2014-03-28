@@ -1,10 +1,14 @@
 #!/bin/sh
-:; exec gosh -- $0 "$@"
+:; exec gosh -r7 -- $0 "$@"
 
-(use piika.cli)
+(import (scheme base)
+        (scheme process-context)
+        (piika cli))
 
 (define (main args)
-  (run args))
+  (run  args))
+
+(main (command-line))
 
 ;; Local Variables:
 ;; mode: scheme

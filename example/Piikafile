@@ -1,0 +1,20 @@
+;; -*- mode: scheme -*-
+
+(import
+  (scheme base)
+  (scheme write)
+  (piika))
+
+(define-task one ()
+  (display "one")
+  (newline))
+
+(define-task two (one)
+  (display "two")
+  (newline))
+
+(define-task three (three)
+  (display "three")
+  (newline))
+
+(run-task)
