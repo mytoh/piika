@@ -6,5 +6,7 @@
  (homepage "http://github.com/mytoh/piika")
  (files ("script/piika"
          "lib/piika/cli.scm"
+         "lib/piika/task.scm"
+         "lib/piika.scm"
          "piika.lehspec"
          )))
