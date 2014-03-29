@@ -11,21 +11,21 @@
 
   (begin
 
-    (define *piika-tasks* '())
+    (define *piika-tasks* (make-parameter '()))
 
     (define (get-tasks)
-      *piika-tasks*)
+      (*piika-tasks*))
 
     (define-syntax define-task
       (syntax-rules ()
         ((_ name (dep ...) body ...)
-         (set! *piika-tasks*
-           (cons
-               (make-task
-                'name
-                (list 'dep ...)
-                (lambda () body ...))
-             *piika-tasks*)))))
+         (*piika-tasks*
+          (cons
+              (make-task
+               'name
+               (list 'dep ...)
+               (lambda () body ...))
+            (*piika-tasks*))))))
 
     (define-record-type <task>
       (make-task
