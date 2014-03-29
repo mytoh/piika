@@ -25,7 +25,7 @@
                'name
                (list 'dep ...)
                (lambda () body ...))
-            (*piika-tasks*))))))
+            (get-tasks))))))
 
     (define-record-type <task>
       (make-task
@@ -52,8 +52,6 @@
                   (do-task (find-task t (get-tasks))))
               (task.deps task))
           ((task.body task)))))
-
-
 
     (define (run-task)
       (let* ((tasks (get-tasks))
