@@ -16,6 +16,6 @@
 
     (define (run args)
       (run-process `(gosh -r7 ,(*piika-task-file*) ,@(cdr (command-line)))
-                   :wait #t))
+                   :wait #true))
 
     ))
