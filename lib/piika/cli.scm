@@ -15,7 +15,7 @@
     (define *piika-task-file* (make-parameter "./Piikafile"))
 
     (define (run args)
-      (run-process `(gosh -r7 ,(*piika-task-file*) ,@(cdr (command-line)))
+      (run-process `(gosh ,(*piika-task-file*) ,@(cdr (command-line)))
                    :wait #true))
 
     ))
