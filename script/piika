@@ -1,4 +1,4 @@
-#/usr/bin/env gosh
+#!/usr/bin/env gosh
 
 (import (scheme base)
         (scheme process-context)
